@@ -22,7 +22,7 @@ const LeftSidebar = () => {
 const logoutHandler = async () => {
     try {
         console.log("Sending logout request...");
-        const res = await axios.get('http://localhost:8000/api/v1/user/logout', { withCredentials: true });
+        const res = await axios.get('https://globalcom-3c5s.onrender.com/api/v1/user/logout', { withCredentials: true });
         console.log("Response received:", res);
         if (res.data.success) {
             dispatch(setAuthUser(null));
